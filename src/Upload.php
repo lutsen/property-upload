@@ -30,11 +30,10 @@ class Upload {
 			$uploadHandler = new UploadHandler( APP_PATH.$property['directory'] );
 
 			// Validation
-			if ( $property['extensions'] ) {
-				$uploadHandler->addRule( 'extension', [ 'allowed' => $property['extensions'] ], 'Only these file types are allowed: '.$property['extensions'] );
-			}
-			if ( $property['max'] ) {
-				$uploadHandler->addRule( 'size', [ 'max' => $property['max'] ], 'The file should be less than {max}' );
+			if ( $property['validate'] ) {
+				foreach ($property['validate'] as $rule) {
+					$uploadHandler->addRule( $rule[0], $rule[1] );
+				}
 			}
 
 			$result = $uploadHandler->process( $_FILES[ $property['name'] ] );
