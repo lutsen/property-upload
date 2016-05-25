@@ -21,7 +21,7 @@ class Upload {
 	 * @param array		$property	Lagan model property arrray.
 	 * @param string	$new_value
 	 *
-	 * @return string	Filename
+	 * @return string	If a new file is uploaded it returns the new file path relative to APP_PATH. Vor validation pusposes, if a new file is not uploaded, it returns the current value.
 	 */
 	public function set($bean, $property, $new_value) {
 
@@ -58,6 +58,10 @@ class Upload {
 				throw new \Exception( 'Upload error. ' . implode( ', ', $result->getMessages() ) );
 
 			}
+
+		} else if ( $bean->{ $property['name'] } ) {
+
+			return $bean->{ $property['name'] };
 
 		}
 
