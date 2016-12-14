@@ -21,7 +21,7 @@ class Upload {
 	 * @param array		$property	Lagan model property arrray.
 	 * @param string	$new_value
 	 *
-	 * @return string	If a new file is uploaded it returns the new file path relative to APP_PATH. Vor validation pusposes, if a new file is not uploaded, it returns the current value.
+	 * @return string	If a new file is uploaded it returns the new file path relative to APP_PATH. For validation pusposes, if a new file is not uploaded, it returns the current value.
 	 */
 	public function set($bean, $property, $new_value) {
 
