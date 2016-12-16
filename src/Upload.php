@@ -30,7 +30,7 @@ class Upload {
 			$uploadHandler = new UploadHandler( APP_PATH.$property['directory'] );
 
 			// Validation
-			if ( $property['validate'] ) {
+			if ( isset( $property['validate'] ) ) {
 				foreach ($property['validate'] as $rule) {
 					$uploadHandler->addRule( $rule[0], $rule[1] );
 				}
