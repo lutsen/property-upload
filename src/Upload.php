@@ -25,7 +25,7 @@ class Upload {
 	 */
 	public function set($bean, $property, $new_value) {
 
-		if ( $_FILES[ $property['name'] ]['size'] > 0 ) {
+		if ( isset( $_FILES[ $property['name'] ] ) && $_FILES[ $property['name'] ]['size'] > 0 ) {
 
 			$uploadHandler = new UploadHandler( APP_PATH.$property['directory'] );
 
