@@ -9,4 +9,4 @@ You can validate the uploaded files by specifying the [upload rules](http://www.
 
 To be used with [Lagan](https://github.com/lutsen/lagan). Lagan lets you create flexible content objects with a simple class, and manage them with a web interface.
 
-Lagan is a project of [Lútsen Stellingwerff](http://lutsen.land/) from [HoverKraft](http://www.hoverkraft.nl/).
+Lagan is a project of [Lútsen Stellingwerff](http://lutsen.net/).
